@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import AddTask from './components/AddTask';
 
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 
 function App() {
+  const [showForm,setShowform] = useState(true);
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -25,6 +27,7 @@ function App() {
     },
   ]);
 
+ 
   const deleteTask = (id) => {
     setTasks(tasks.filter((item) => item.id !== id));
   };
@@ -32,15 +35,23 @@ function App() {
   const updateReminder = (id) => {
     setTasks(
       tasks.map((task) =>
-        task.id === id ?  { ...task, reminder: !task.reminder } : task
+        task.id === id ? { ...task, reminder: !task.reminder } : task
       )
     );
-  tasks.map(item=>console.log(item.reminder));
   };
+
+  const addTask=(task)=>{
+    setTasks([...tasks,task]);
+  }
+
+  const togol = () => {
+    setShowform(!showForm);
+  }
 
   return (
     <div className="container">
-      <Header />
+      <Header onToggol={togol} showForm={showForm}/>
+      {showForm && (<AddTask addTask={addTask}/>)}
       {tasks.length > 0 ? (
         <Tasks
           tasks={tasks}

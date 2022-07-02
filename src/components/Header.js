@@ -2,15 +2,13 @@ import Button from "./Button";
 import Clock from "./Clock";
 
 
-const Header = ({title}) => {
-    const onClick = () => {
-        console.log('click in the header');
-    }
+const Header = ({title, onToggol , showForm}) => {
+  
   return (
     <header className="header">
       <h1>{title}</h1>
       <Clock />
-      <Button text='Add' color='green' onClick={onClick}/>
+      <Button text={showForm?'Close':'Add'} color={showForm?'orange':'green'} onClick={onToggol}/>
     </header>
   )
 };
