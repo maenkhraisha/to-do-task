@@ -3,9 +3,9 @@ import Task from './Task';
 const Tasks = ({ tasks, onDelete ,onUpdateReminder}) => {
   return (
     <>
-      {tasks.map((task) => (
+      {tasks.map((task,index) => (
         <Task
-          key={task.id}
+          key={index}
           task={task}
           onDelete={onDelete}
           onUpdateReminder={onUpdateReminder}

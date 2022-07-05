@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/personalReadme.md
+
 # testing
 /coverage
 
