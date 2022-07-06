@@ -11,16 +11,16 @@ const Clock = () => {
  setInterval(() => {
     let date = new Date();
     let timeObj = {
-        hour: date.getHours(),
-        minute: date.getMinutes(),
-        second :date.getSeconds()
+        hour: String(date.getHours()).padStart(2, '0'),
+        minute: String(date.getMinutes()).padStart(2, '0'),
+        second :String(date.getSeconds()).padStart(2, '0')
       };
     setTime(timeObj);
   }, 1000);
 
   return (
   <>
-  <p>{time.hour+":"+time.minute+":"+time.second}</p>
+  <p className='clock'>{time.hour+" : "+time.minute+" : "+time.second}</p>
   </>);
 };
 

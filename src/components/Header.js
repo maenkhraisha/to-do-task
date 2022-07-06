@@ -1,10 +1,11 @@
 import Button from './Button';
 import Clock from './Clock';
+import logo from './img/logo.gif';
 
 const Header = ({ title, onToggol, showForm }) => {
   return (
     <header className="header">
-      <h1>{title}</h1>
+      <img src={logo} alt="logo" className='logo'/>
       <Clock />
       <Button
         text={showForm ? 'Close' : 'Add'}
