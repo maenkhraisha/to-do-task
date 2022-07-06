@@ -15,9 +15,9 @@
 ## Live Demo 
 
 Go to live demo : 
-https://maenkhraisha.github.io/todo-list-application/
+https://maenkhraisha.github.io/to-do-task/
 
-![portfolio](./src/functionBased/img/todo-screenshot.png)
+![portfolio](./src/components/img/screenshot.png)
 
 ## Getting Started
 
@@ -26,12 +26,7 @@ https://maenkhraisha.github.io/todo-list-application/
 ```
 $ git clone git@github.com:maenkhraisha/todo-list-application.git
 ```
-```
-npm install json-server
-```
-```
-npm run server
-```
+
 ``` 
 npm install 
 ```
